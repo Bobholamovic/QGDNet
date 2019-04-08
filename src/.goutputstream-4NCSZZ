@@ -1,0 +1,20 @@
+DATA_DIR: /media/gdf/0005898C000F299F/FDisk/gMAD/pristine_images/
+
+LIST_DIR: /media/gdf/0005898C000F299F/FDisk/gMAD/pristine_images/level3/
+
+OUT_DIR: ../exps/
+
+IQA_MODEL: /home/gdf/Codes/CNN-FRIQA/models/ckp_n8_p32_d3.pkl
+
+# Crop size for input of IQANet
+PATCH_SIZE: 32
+
+# Crop size for input of QGCNN
+CROP_SIZE: 64
+
+CRITERION: MAE
+
+FEATS:
+ - fl2: 0.3
+TEST_SUFFIX: fl2
+  
