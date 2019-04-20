@@ -134,5 +134,6 @@ class ComLoss(nn.Module):
 def read_config(config_path):
     f = open(config_path, 'r')
     cfg = yaml.load(f.read())
+    f.close()
     return cfg
 
