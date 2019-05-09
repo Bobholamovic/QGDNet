@@ -104,9 +104,9 @@ class ComLoss(nn.Module):
             self.criterion = F.l1_loss
         elif pixel_criterion == 'MSE':
             self.criterion = F.mse_loss
+        elif hasattr(pixel_criterion, '__call__'):
+            self.criterion = pixel_criterion 
         else:
-            if hasattr(pixel_criterion, '__call__'):
-                self.criterion = pixel_criterion 
             raise ValueError('invalid criterion')
             
         self.weights = weights
