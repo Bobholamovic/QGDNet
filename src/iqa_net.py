@@ -1,6 +1,7 @@
 ## Modified from [Bobholamovic/CNN-FRIQA](https://github.com/Bobholamovic/CNN-FRIQA/blob/master/src/model.py)
 
 import math
+from collections import OrderedDict
 import torch
 import torch.nn as nn
 
@@ -117,7 +118,7 @@ class IQANet(nn.Module):
 
         self._initialize_weights()
 
-        self.features = dict()
+        self.features = OrderedDict()
 
         # Register
         # Would Module.register_forward_hook work better?
